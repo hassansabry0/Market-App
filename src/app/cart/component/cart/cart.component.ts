@@ -87,7 +87,6 @@ export class CartComponent implements OnInit {
     };
     this.cartService.addToCart(model).subscribe(
       (res) => {
-        let user: string;
         console.log(res);
 
         this.sentSuccess = true;
