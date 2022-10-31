@@ -36,9 +36,7 @@ export class AuthService {
 
     return this.userData.getValue()!;
   }
-  getUserCart(id: string): Observable<any> {
-    return this.http.get(`https:fakestoreapi.com/carts/user/${id}`);
-  }
+
   logOut() {
     localStorage.removeItem('token-market');
     this.userData.next(null!);

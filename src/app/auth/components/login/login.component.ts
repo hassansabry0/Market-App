@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
             event.path[5].children[2].children[0].children[0].children[0].children[0]?.classList.add(
               'bi-people-fill'
             );
+            //add cart button
             event.path[5].children[0].children[0].children[0].children[2].children[0].children[1]?.classList.remove(
               'remove'
             );

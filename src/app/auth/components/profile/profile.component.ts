@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
       event.path[7].children[2].children[0].children[0].children[0].children[0].classList.add(
         'bi-people'
       );
-
+      //remove cart
       event.path[7].children[0].children[0].children[0].children[2].children[0].children[1].classList.add(
         'remove'
       );
@@ -35,15 +35,5 @@ export class ProfileComponent implements OnInit {
         'add'
       );
     }
-    // if (event.target.innerHTML === 'My Cart') {
-    //   this.AuthService.getUserCart('2').subscribe(
-    //     (response) => {
-    //       console.log(response);
-    //     },
-    //     (error) => {
-    //       console.log(error);
-    //     }
-    //   );
-    // }
   }
 }

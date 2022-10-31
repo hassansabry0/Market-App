@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private SharedService: SharedService) {}
 
   ngOnInit(): void {
+    // show length of cart
     this.SharedService.getCount().subscribe((value) => {
       this.count = value ?? 0;
     });

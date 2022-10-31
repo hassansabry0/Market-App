@@ -15,15 +15,13 @@ export class CardComponent implements OnInit {
 
   constructor(private SharedService: SharedService) {}
 
-  ngOnInit(): void {
-    this.SharedService.getCount();
-  }
+  ngOnInit(): void {}
 
   add() {
     this.item.emit({ item: this.product, quantity: this.count });
+    // show length of cart
     this.SharedService.setCount(
       JSON.parse(localStorage.getItem('cart')!)?.length
     );
-    console.log(JSON.parse(localStorage.getItem('cart')!)?.length);
   }
 }
