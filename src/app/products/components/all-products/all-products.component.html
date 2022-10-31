@@ -1,1 +1,20 @@
-<p>all-products works!</p>
+<div class="container">
+  <div class="my-5 d-flex justify-content-center" *ngIf="isLoading">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="row" *ngIf="!isLoading">
+    <div class="my-2 col-12">
+      <app-select-categories
+        [title]="'Categories :'"
+        [data]="categories"
+        (selectedValue)="getProductByCategory($event)"
+      ></app-select-categories>
+    </div>
+    <div
+      class="col-md-3 col-sm-12 cart my-3 bg-light"
+      *ngFor="let product of products"
+    >
+      <app-card [product]="product" (item)="addToCart($event)"></app-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@media (max-width: 1025px) {
+  .full-width {
+    width: 100% !important;
+  }
+}
+.login {
+  background: linear-gradient(to right, #950b06, #440606);
+  font-weight: bold;
+}
+.offcanvas-header {
+  background: linear-gradient(to left, #950b06, #440606);
+  font-weight: bold;
+}

@@ -1,1 +1,30 @@
-
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col min-vh-100 py-3">
+      <!-- toggler -->
+      <button
+        class="btn float-start"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvas"
+        role="button"
+        title="btn"
+      >
+        <i
+          *ngIf="auth"
+          class="bi bi-people-fill fs-3"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+        ></i>
+        <i
+          *ngIf="!auth"
+          class="bi bi-people fs-3"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+        ></i>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

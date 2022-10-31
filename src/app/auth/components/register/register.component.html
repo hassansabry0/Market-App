@@ -1,0 +1,107 @@
+<h5 class="text-center register p-3 mb-5 text-light rounded-2">Register</h5>
+<form (ngSubmit)="submitRegisterForm(registerForm)" [formGroup]="registerForm">
+  <ul
+    class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center"
+    id="menu"
+  >
+    <li class="nav-item">
+      <div class="input-group flex-nowrap my-3">
+        <span class="input-group-text" id="warpping">
+          <i class="bi bi-pencil-square"></i>
+
+          ></span
+        >
+        <input
+          type="text"
+          class="form-control rounded-4"
+          placeholder="First Name"
+          aria-label="first_name"
+          aria-describedby="wrapping"
+          formControlName="first_name"
+        />
+      </div>
+    </li>
+    <li class="nav-item">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="warppingg">
+          <i class="bi bi-pencil-square"></i>
+
+          ></span
+        >
+        <input
+          type="text"
+          class="form-control rounded-4"
+          placeholder="Last Name"
+          aria-label="last_name"
+          aria-describedby="wrappingg"
+          formControlName="last_name"
+        />
+      </div>
+    </li>
+    <li class="nav-item">
+      <div class="input-group flex-nowrap my-3">
+        <span class="input-group-text" id="addon-wrapping">@</span>
+        <input
+          type="email"
+          class="form-control rounded-4"
+          placeholder="email"
+          aria-label="email"
+          aria-describedby="addon-wrapping"
+          formControlName="email"
+        />
+      </div>
+    </li>
+    <li class="nav-item w-100">
+      <div class="input-group flex-nowrap p-2">
+        <span class="input-group-text" id="addon">
+          <i class="bi bi-calendar-date-fill"></i>
+        </span>
+        <input
+          type="number"
+          min="18"
+          max="80"
+          class="form-control rounded-4"
+          placeholder="Age"
+          aria-label="age"
+          aria-describedby="addon"
+          formControlName="age"
+        />
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <div class="input-group flex-nowrap my-3">
+        <span class="input-group-text" id="addonn-wrapping"
+          ><i class="bi bi-lock-fill"></i
+        ></span>
+
+        <input
+          type="password"
+          class="form-control rounded-4"
+          placeholder="Password"
+          aria-describedby="addonn-wrapping"
+          formControlName="password"
+        />
+      </div>
+    </li>
+    <li class="nav-item">
+      <button
+        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
+        type="submit"
+        [disabled]="!registerForm.valid"
+      >
+        <!-- <span [ngSwitch]="isLoading">
+            <app-spinner *ngSwitchCase="true"></app-spinner>
+            <span *ngSwitchCase="false">Register</span>
+            <span *ngSwitchDefault>Register</span>
+          </span> -->
+        register
+      </button>
+    </li>
+    <li *ngIf="errorMessage" class="nav-item">
+      <p class="text-danger">
+        {{ errorMessage }}
+      </p>
+    </li>
+  </ul>
+</form>

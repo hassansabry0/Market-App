@@ -1,0 +1,23 @@
+.image {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0px);
+  }
+  35% {
+    transform: translateX(-100px);
+  }
+
+  75% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(100px);
+  }
+}

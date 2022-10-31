@@ -1,0 +1,35 @@
+<ul
+  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center"
+  id="menu"
+>
+  <li class="nav-item my-3">
+    <div class="text-center">
+      <img
+        class="w-50 rounded-50"
+        src="./../../../../assets//images//profile.webp"
+        alt=""
+      />
+    </div>
+  </li>
+  <li class="nav-item">
+    <strong class="h5">Name:</strong>
+    {{ userData?.first_name + " " + userData?.last_name }}
+  </li>
+
+  <li class="nav-item my-3">
+    <strong class="h5">Email:</strong> {{ userData?.email }}
+  </li>
+  <li class="nav-item"><strong class="h5">Age:</strong> {{ userData?.age }}</li>
+  <li class="nav-item my-3">
+    <button
+      class="btn btn-success"
+      routerLink="/cart"
+      (click)="goToCart($event)"
+    >
+      My Cart
+    </button>
+  </li>
+  <li class="nav-item my-3">
+    <button class="btn btn-danger" (click)="goToCart($event)">LogOut</button>
+  </li>
+</ul>

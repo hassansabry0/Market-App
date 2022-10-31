@@ -1,0 +1,23 @@
+<div
+  class="offcanvas offcanvas-start w-25 full-width"
+  tabindex="-1"
+  id="offcanvas"
+  data-bs-keyboard="false"
+  data-bs-backdrop="false"
+>
+  <div class="offcanvas-header d-flex justify-content-end">
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div
+    class="offcanvas-body px-0 flex-column justify-content-center align-items-center"
+  >
+    <app-register (loginEmail)="getEmail($event)" *ngIf="!auth"></app-register>
+    <app-login [email]="email" *ngIf="!auth"></app-login>
+    <app-profile *ngIf="auth"></app-profile>
+  </div>
+</div>

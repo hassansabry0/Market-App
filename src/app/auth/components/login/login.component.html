@@ -1,0 +1,59 @@
+<h5 class="text-center login p-3 mb-5 text-light rounded-2">Login</h5>
+<form (ngSubmit)="submitLoginForm(loginForm, $event)" [formGroup]="loginForm">
+  <ul
+    class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center"
+    id="menu"
+  >
+    <li class="nav-item">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">@</span>
+        <input
+          type="email"
+          class="form-control rounded-4"
+          placeholder="email"
+          aria-label="email"
+          aria-describedby="addon-wrapping"
+          id="floatingUserName"
+          formControlName="email"
+          [value]="email"
+        />
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <div class="input-group flex-nowrap my-3">
+        <span class="input-group-text" id="addonn-wrapping"
+          ><i class="bi bi-lock-fill"></i
+        ></span>
+
+        <input
+          type="password"
+          class="form-control rounded-4"
+          id="floatingPassword"
+          placeholder="Password"
+          aria-describedby="addonn-wrapping"
+          formControlName="password"
+        />
+      </div>
+    </li>
+    <li class="nav-item">
+      <button
+        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
+        type="submit"
+        [disabled]="!loginForm.valid"
+      >
+        <!-- <span [ngSwitch]="isLoading">
+            <app-spinner *ngSwitchCase="true"></app-spinner>
+            <span *ngSwitchCase="false">Login</span>
+            <span *ngSwitchDefault>Login</span>
+          </span> -->
+        login
+      </button>
+    </li>
+    <li *ngIf="errorMessage" class="nav-item">
+      <p class="text-danger">
+        {{ errorMessage }}
+      </p>
+    </li>
+  </ul>
+</form>
